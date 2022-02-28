@@ -60,6 +60,9 @@ head(activity)
 
 What is mean total number of steps taken per day?
 
+
+![plot2-1](https://user-images.githubusercontent.com/98646602/155909120-eed737da-164a-4b8f-98c5-fb623b7092f6.png)
+
 ``` r
 activity1<- activity %>% drop_na()
 # Create a new dataframe with the sum of steps per day.
