@@ -61,8 +61,6 @@ head(activity)
 What is mean total number of steps taken per day?
 
 
-![plot2-1](https://user-images.githubusercontent.com/98646602/155909120-eed737da-164a-4b8f-98c5-fb623b7092f6.png)
-
 ``` r
 activity1<- activity %>% drop_na()
 # Create a new dataframe with the sum of steps per day.
@@ -84,7 +82,8 @@ hist(activity2$steps, xlab = 'Steps per Day',
      main = 'Histogram of Total Number of Steps per Day', breaks = 15)
 ```
 
-![](github_markdown_files/figure-gfm/pressure-1.png)<!-- -->
+![plot3-1](https://user-images.githubusercontent.com/98646602/155910167-bbd7cda6-aa9c-459c-bfae-bc67cb3a6a32.png)
+
 
 ``` r
 # Mean and median total steps taken per day 
@@ -116,7 +115,8 @@ ggplot(activity2, aes(as.Date(date), y = as.numeric(steps), color = 'Daily Steps
         theme(legend.title = element_text(face = "bold"))
 ```
 
-![](github_markdown_files/figure-gfm/plot-1.png)<!-- -->
+![plot-1](https://user-images.githubusercontent.com/98646602/155910178-54bff6d1-0512-4f32-b0b4-d7a7b7e2b84a.png)
+
 
 What is the average daily activity pattern?
 
@@ -137,7 +137,8 @@ ggplot(activity3, aes(as.numeric(interval), y = steps, color = 'Max Steps/5 Minu
         theme(legend.title = element_text(face = "bold"))
 ```
 
-![](github_markdown_files/figure-gfm/plot2-1.png)<!-- -->
+![plot2-1](https://user-images.githubusercontent.com/98646602/155910190-018e86be-d2eb-4381-88e2-f9949e8a1e6f.png)
+
 
 Imputing missing
 
@@ -169,7 +170,8 @@ hist(newhistdata$steps, xlab = 'Steps per Day',
      main = 'Histogram of Total Number of Steps per Day', breaks = 15)
 ```
 
-![](github_markdown_files/figure-gfm/plot3-1.png)<!-- -->
+![plot3-1](https://user-images.githubusercontent.com/98646602/155910204-ead2dacb-dbd6-492d-a93c-bc4cdf763351.png)
+
 
 Are there differences in activity patterns between weekdays and
 weekends?
@@ -196,4 +198,5 @@ ggplot(avginterval, aes(interval, steps)) +
         theme(legend.title = element_text(face = "bold"))
 ```
 
-![](github_markdown_files/figure-gfm/plot4-1.png)<!-- -->
+![plot4-1](https://user-images.githubusercontent.com/98646602/155910219-5fc4f7ad-9a7a-41cc-9b3f-45e19d2c43ae.png)
+
